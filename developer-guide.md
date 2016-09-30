@@ -112,4 +112,19 @@ git commit -m "write a short message emphasing your new feature or bug fix"
 You may want to edit some more code before you're ready to move on, and so 
 whichever files you edit, you will need to `git add` them, then do another `git commit -m "message"`
 
-If your new feature is done, and you're ready to merge it with the `develop` code, then you should submit a `pull request` on your bitbucket.org repository website. Then your code will be reviewed, and tested by another developer, before we make the final merge.
+Now, if you're through making changes for the time being, you will need to push those changes to the repository you branched off of. So if you created a branch `new_feature` based off of the `develop` branch, you will need to
+
+```
+git pull origin develop 	# this bring in any code that someone else may have updated
+git push origin develop 	# puts your new code into the main develop branch
+```
+
+As a side note, it is probably a good idea to `git pull` from whatever branch you are working off of, whenever you begin working, so that your branch will contain the most up-to-date code from everyone. If someone else has pushed code into `develop` and you haven't pulled before you `push` your changes, then your branch will be 'behind' and you may have to do a `rebase` with that branch. This may happen occasionally, and you can find some instructions on how to handle it [here](https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow).
+
+If your new feature is done, you've `pulled` and `pushed` and you're ready to merge it with the `develop` code, then you should submit a `pull request` by clicking the 
+'pull request' link on your bitbucket.org repository website. The box on the left should be whatever `new_feature` branch you have, and you want that to go into whatever origin branch `master` or `develop` which you choose from the box on the right. Then your code will be reviewed, and tested by another developer, before we make the final merge.
+
+Reviewing Pull Requests
+-----------------------
+
+blah blah blah!
